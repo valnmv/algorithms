@@ -23,9 +23,9 @@ class PidgeonholeSort {
     let i = 0;
     this.items = [];
 
-    Object.keys(newItems).forEach((k) => {
-      for (let j = 0; j < newItems[k].length; j++) {
-        this.items[i++] = newItems[k][j];
+    newItems.forEach((v) => {
+      for (let j = 0; j < v.length; j++) {
+        this.items[i++] = v[j];
         // console.log(this.items[i - 1]);
       }
     });

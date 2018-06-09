@@ -22,7 +22,7 @@ class Hanoi {
     console.log(this.getSparePeg('A', 'C'));
     console.log(this.getSparePeg('C', 'A'));
   }
-  
+
   run(count, peg1, peg2) {
     if (count === 1) {
       this.move(peg1, peg2);

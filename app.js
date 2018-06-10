@@ -13,5 +13,5 @@ sortAlgorithm.sortTest();
 const hanoi = new Hanoi();
 hanoi.testGetSparePeg();
 
-hanoi.allPegs.A = ['1', '2', '3'];
-hanoi.run(3, 'A', 'B');
+hanoi.allPegs.A = ['1', '2', '3', '4'];
+hanoi.run(4, 'A', 'B');

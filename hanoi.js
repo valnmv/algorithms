@@ -1,3 +1,4 @@
+const assert = require('assert');
 
 class Hanoi {
   constructor() {
@@ -15,12 +16,12 @@ class Hanoi {
   }
 
   testGetSparePeg() {
-    console.log(this.getSparePeg('A', 'B'));
-    console.log(this.getSparePeg('B', 'A'));
-    console.log(this.getSparePeg('B', 'C'));
-    console.log(this.getSparePeg('C', 'B'));
-    console.log(this.getSparePeg('A', 'C'));
-    console.log(this.getSparePeg('C', 'A'));
+    assert.equal(this.getSparePeg('A', 'B'), 'C');
+    assert.equal(this.getSparePeg('B', 'A'), 'C');
+    assert.equal(this.getSparePeg('B', 'C'), 'A');
+    assert.equal(this.getSparePeg('C', 'B'), 'A');
+    assert.equal(this.getSparePeg('A', 'C'), 'B');
+    assert.equal(this.getSparePeg('C', 'A'), 'B');
   }
 
   run(count, peg1, peg2) {

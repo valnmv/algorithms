@@ -31,3 +31,6 @@ linkedList.reverse();
 linkedList.print();
 linkedList.reverse();
 linkedList.print();
+
+linkedList.delete(2);
+linkedList.print();

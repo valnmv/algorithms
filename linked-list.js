@@ -10,6 +10,27 @@ class LinkedList {
     this.length++;
   }
 
+  delete(pos) {
+    if (pos >= this.length) {
+      return;
+    }
+
+    let prev = null;
+    let item = this.head;
+    for (let i = 0; i < pos; i++) {
+      prev = item;
+      item = item.next;
+    }
+
+    if (prev !== null) {
+      prev.next = item.next;
+    } else {
+      this.head = item.next;
+    }
+
+    this.length--;
+  }
+
   reverse() {
     let item = this.head;
     let prev = null;
@@ -25,6 +46,7 @@ class LinkedList {
   }
 
   print() {
+    console.log(`length: ${this.length}`);
     let item = this.head;
     while (item !== null) {
       console.log(item.data);
